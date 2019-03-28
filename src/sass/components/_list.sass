@@ -1,0 +1,9 @@
+.counter
+    counter-reset: my-sec-counter
+    *, *:last-of-type
+        margin-left: 1.5em
+        &::before
+            position: absolute
+            transform: translateX(-1.5em)
+            counter-increment: my-sec-counter
+            content: counter(my-sec-counter) ". "

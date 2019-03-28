@@ -1,0 +1,120 @@
+.main-nav
+    display: none
+    transition: all ease-in-out .2s
+    @media (min-width: $medium)
+        display: block
+        flex-basis: 60%
+    @media (min-width: $large)
+        flex-basis: 50%
+    @media (min-width: $huge)
+        flex-basis: 40%
+    ul
+        display: flex
+        justify-content: space-between
+        a
+            color: darken($text-inverse, 30%)
+            text-decoration: none
+            &:hover
+                color: $text-inverse
+            &.active,
+            &:active
+                color: $text-accent
+            
+    
+.main-nav-small
+    position: fixed
+    height: 100vh
+    top: 0
+    left: 100%
+    right: 0
+    bottom: 0
+    background-color: $dark-blue
+    z-index: 10000
+    transition: all ease-in-out .2s
+    @media (min-width: $medium)
+        display: none
+    &.is-open
+        left: 0
+
+    ul
+        display: flex
+        height: 100vh
+        flex-direction: column
+        justify-content: space-around
+
+        li
+            flex: 1 1 auto
+            border-bottom: 1px solid $dark-blue
+            display: flex
+            a
+                color: $text-inverse
+                text-decoration: none
+                display: flex
+                flex-basis: 100%
+                align-items: center
+                justify-content: center
+                &:hover
+                    background: rgba($black, .10)
+
+.nav-toggle
+    display: block
+    right: 2em
+    position: absolute
+    cursor: pointer
+    z-index: 10001
+    @media (min-width: $medium)
+        display: none
+    .hamburger, .hamburger::before, .hamburger::after
+        content: ''
+        display: block
+        width: 2em
+        height: 3px
+        background-color: $white
+        transition: all ease-in-out .2s
+
+    .hamburger::before
+        transform: translateY(-6px)
+        opacity: 1
+
+    .hamburger::after
+        transform: translateY(3px)
+
+    &.active
+        position: fixed
+
+        .hamburger
+            transform: rotate(45deg)
+
+        .hamburger::before
+            opacity: 0
+
+        .hamburger::after
+            transform: rotate(90deg) translateX(-3px)
+
+.side-nav
+    padding-top: 1em
+    line-height: 1.6em
+    ul
+        margin-bottom: 2em
+        li
+            padding: 0 1em
+            &:not(:first-of-type):hover,
+            &:not(:first-of-type):active
+                background-color: $yellow
+                a
+                    color: $text-base
+            &.active
+                background-color: $dark-blue
+                a
+                    color: $text-inverse
+            a
+                text-decoration: none
+                color: $text-base
+            &.side-nav-title
+                text-align: center
+                text-transform: uppercase
+                font-weight: bold
+                color: $text-base
+                
+            
+

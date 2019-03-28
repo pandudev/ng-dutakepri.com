@@ -1,0 +1,39 @@
+.btn
+    display: block
+    text:
+        transform: uppercase
+        decoration: none
+        align: center
+    padding: 0.75em 0.25em
+
+    &:not(:last-of-type)
+        margin-bottom: .6em
+    
+.btn-primary
+    background-color: $blue
+    color: $text-inverse
+    border: 2px solid $blue
+
+    &:hover,
+    &:focus
+        background: darken($blue, 15%)
+        border-color: darken($blue, 15%)
+
+.btn-secondary
+    border: 2px solid $white
+    color: $white
+
+    &:hover,
+    &:focus
+        background-color: $white
+        color: $text-base
+
+.btn-accent
+    background-color: $yellow
+    color: $text-base
+    border: 2px solid $yellow
+
+    &:hover,
+    &:focus
+        background: darken($yellow, 15%)
+        border-color: darken($yellow, 15%)

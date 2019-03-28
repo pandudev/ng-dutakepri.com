@@ -1,0 +1,77 @@
+.footer
+    position: relative
+    background-color: $blue
+    padding: 2em 0
+    color: $text-inverse
+    .grid
+        flex-direction: column
+        @media (min-width: $medium)
+            justify-content: space-between
+            flex-direction: row
+            flex-wrap: wrap
+        @media (min-width: $huge)
+            width: 75%
+            margin: 0 auto
+        .social-wrapper
+            flex-basis: 35%
+            .address
+                text-align: center
+                margin-bottom: 1.2em
+                @media (min-width: $medium)
+                    text-align: left
+                p:not(.text-intro)
+                    font-size: .8em
+                    margin-bottom: .5em
+                    line-height: 1.7em
+                    @media (min-width: $huge)
+                        font-size: 1em
+                p.text-intro
+                    margin-bottom: 1em
+            .social-media
+                flex-direction: row
+                justify-content: space-around
+                width: 50%
+                margin: 0 auto
+                margin-bottom: 2em
+                @media (min-width: $medium)
+                    width: 100%
+                    justify-content: flex-start
+                    a
+                        margin-right: 1em
+            
+        .nav-footer-wrapper
+            display: none
+            flex-basis: 65%
+            @media (min-width: $small)
+                display: block
+            .footer-nav
+                flex-direction: row
+                justify-content: space-around
+                margin-bottom: 1em
+                .nav-list-wrapper
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    p
+                        margin-bottom: .3em
+                    .nav-list
+                        margin-bottom: 2em
+                        display: flex
+                        flex-direction: column
+                        line-height: 1.7em
+                        a
+                            text-decoration: none
+                            color: darken($text-inverse, 30%)
+                            font-size: .8em
+                            &:hover
+                                color: $text-inverse
+                            &:active
+                                color: $text-accent
+                    .tentang-wrapper
+                        .nav-list
+                            margin-bottom: .2em
+        .copyright
+            text-align: center
+            flex-basis: 100%
+            p:first-of-type
+                margin-bottom: .5em

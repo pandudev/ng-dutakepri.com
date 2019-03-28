@@ -1,0 +1,235 @@
+.promotion
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba($black, .9)
+    z-index: 999999
+    &.is-closed
+        display: none
+    .promo
+        border: .2em solid $grey
+        // width: 400px
+        // height: 400px
+        width: 300px
+        height: 300px
+        background-image: url('src/assets/img/coin.jpg')
+        background-size: cover
+        position: relative
+        background-color: $grey
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        @media (min-width: $small)
+            width: 400px
+            height: 400px
+        @media (min-width: $medium)
+            width: 600px
+            height: 600px
+        .close
+            position: absolute
+            right: 1em
+            top: 1em
+            cursor: pointer
+            width: 2em
+            height: 2em
+            display: flex
+            align-items: center
+            .close-btn
+                transform: rotate(45deg)
+                &:before,
+                &:after
+                    content: ''
+                    display: block
+                    width: 2em
+                    height: 3px
+                    background-color: $white
+                &:after
+                    transform: rotate(90deg) translateX(-3px)
+                &:before
+                    transform: rotate(180deg)
+
+
+.hero
+    height: fit-content
+    padding: 6em 0 2em 0
+    background-image: url('src/assets/img/hero-background.png')
+    background-size: cover
+    background-position: center
+    @media (min-width: $large)
+        height: 600px
+        padding-top: 12em
+        .container
+            display: flex
+            flex-direction: column
+            h1, p, .hero-button
+                width: 60%
+            
+    h1
+        text:
+            align: center
+            shadow: 1px 1px $black
+        color: $text-inverse
+        margin-bottom: .2em
+        @media (min-width: $large)
+            text-align: left
+        @media (min-width: $huge)
+            span
+                display: block
+    p
+        color: $text-inverse
+        text:
+            align: justify
+            shadow: 1px 1px $black
+        margin-bottom: 1em
+    .hero-button
+        flex-direction: column
+        margin: 0
+        @media (min-width: $medium)
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            .btn
+                width: 200px
+                &:not(:last-of-type)
+                    margin: 0 !important
+                    margin-right: 1em !important
+                &:last-of-type
+                    margin: 0 !important
+                    margin-left: 1em !important
+        @media (min-width: $large)
+            justify-content: flex-start
+            .btn
+                &:not(:last-of-type)
+                &:last-of-type,
+                    margin: 0 !important
+
+.product
+    background-image: url('src/assets/img/batik-background.png')
+    background-size: auto
+    background-position: center
+    height: fit-content
+    padding: 2em 0
+    h1
+        text-align: center
+        color: $text-base-light
+        margin-bottom: 1em
+        &::after
+            content: ''
+            position: relative
+            top: .2em
+            display: block
+            max-width: 400px
+            margin: 0 auto
+            height: 2px
+            background-color: $blue
+    .product-items
+        flex-direction: column
+        align-items: stretch
+        @media (min-width: $medium)
+            flex-direction: row
+            justify-content: space-between
+
+        .product-item
+            text-align: center
+            background-color: rgba($grey, .9)
+            position: relative
+            @media (min-width: $medium)
+                    flex-basis: 33.33%
+                    margin: 0 1em
+                    &:first-of-type
+                        margin-left: 0
+                    &:last-of-type
+                        margin-right: 0
+            &:not(:last-of-type)
+                margin-bottom: .6em
+                @media (min-width: $medium)
+                    margin-bottom: 0
+
+            h2
+                background-color: $blue
+                color: $text-inverse
+                margin-bottom: 1em
+                padding: 1em
+            img
+                height: 120px
+                margin-bottom: 1em
+            .product-caption
+                background-color: $blue
+                height: fit-content
+                padding: 1em
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                @media (min-width: $medium)
+                    height: 200px
+                @media (min-width: $large)
+                    height: 150px
+                    a
+                        width: 150px
+                        display: flex
+                        justify-content: center
+                        align-self: center
+                @media (min-width: $huge)
+                    flex-direction: row
+                    height: fit-content
+                    a
+                        align-self: flex-start
+                        width: 200px
+                p
+                    margin-bottom: 1em
+                    color: $text-inverse
+                    line-height: 1.3em
+                    @media (min-width: $huge)
+                        margin-bottom: 0
+                        padding-right: .2em
+                        text-align: left
+                
+
+
+.map
+    position: relative
+    height: 200px
+    overflow: hidden
+    &::before
+        z-index: -1
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        left: -35%
+        background-image: url('src/assets/img/map.png')
+        background-position: center
+        background-size: cover
+        @media (min-width: $large)
+            top: -20%
+        @media (min-width: $huge)
+            background-size: auto
+
+.stakeholders
+    padding: 2em 0
+    p
+        margin-bottom: 1em
+        text-align: center
+        color: $text-base
+        @media (min-width: $medium)
+            text-align: left
+    .grid
+        flex-direction: column
+        align-items: center
+        @media (min-width: $medium)
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+        .stakeholder
+            padding: 0 1em
+            &:not(:last-of-type)
+                margin-bottom: 1em
+                @media (min-width: $medium)
+                    margin-bottom: 0
+                
+            
+    

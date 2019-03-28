@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dutakepri';
+  navOpen = false;
+
+  toggleNav() {
+    this.navOpen = !this.navOpen;
+  }
 }

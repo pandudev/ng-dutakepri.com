@@ -1,0 +1,120 @@
+.contact
+    background-color: $white
+    color: $text-base
+    padding-top: 3em
+    .contact-wrapper
+        h1, h2
+            text-align: center
+            color: $text-base-light
+        p
+            line-height: 1.2em
+            text-align: justify
+            font-style: italic
+            margin-top: 1em
+            font-size: .8rem
+            @media (min-width: $large)
+                width: 75%
+                margin: 1em auto 0 auto
+                font-size: 1rem
+            @media (min-width: $huge)
+                width: 60%
+        hr
+            @media (min-width: $large)
+                width: 75%
+            @media (min-width: $huge)
+                width: 60%
+        .grid
+            padding-top: 1em
+            justify-content: space-between
+            @media (min-width: $huge)
+                width: 90%
+                justify-content: space-around
+            .contact-detail
+                display: none
+                img
+                    align-self: center
+                @media (min-width: $medium)
+                    position: relative
+                    display: block
+                    flex-basis: 30%
+                    z-index: 0
+                    
+                @media (min-width: $huge)
+                    flex-basis: 25%
+            .form
+                color: $text-base
+                margin-top: 1em
+                margin-bottom: 1em
+                width: 100%
+                @media (min-width: $medium)
+                    flex-basis: 65%
+                @media (min-width: $huge)
+                    flex-basis: 60%
+                .form-group
+                    flex-direction: column
+                    display: flex
+                    justify-content: space-between
+                    margin-bottom: 1em
+                    @media (min-width: $medium)
+                        flex-direction: row
+                    label
+                        flex-basis: 30%
+                        font-size: .8rem
+                        margin-bottom: .8em
+                        @media (min-width: $medium)
+                            margin-bottom: unset
+                            font-size: 1rem
+
+                    input, textarea, select
+                        flex-basis: 65%
+                    .form-radio
+                        display: flex
+                        justify-content: space-around
+                        width: 100%
+                .btn
+                    @media (min-width: $medium)
+                        width: 65%
+                        margin-left: auto
+    // .call-center
+    //     background-color: $yellow
+    //     padding: .5em 0
+    //     @media (min-width: $medium)
+    //         margin-top: -1.5em
+    //         z-index: 10
+    //         position: relative
+    //     @media (min-width: $large)
+    //         margin-top: -10em
+    //     @media (min-width: $huge)
+    //         margin-top: -13em
+    //     .grid
+    //         justify-content: space-around
+    //         align-items: center
+    //         text-align: center
+    //         @media (min-width: $medium)
+    //             justify-content: center
+    //         h1
+    //             flex-basis: 40%
+    //             font-size: 1.2em
+    //             font-weight: $font-bold
+    //             @media (min-width: $medium)
+    //                 font-size: 1.8em
+    //                 flex-basis: 35%
+    //         img
+    //             width: 10rem
+    //             flex-basis: 40%
+    //             @media (min-width: $medium)
+    //                 flex-basis: 35%
+    //             @media (min-width: $large)
+    //                 flex-basis: 25%
+    //             @media (min-width: $huge)
+    //                 flex-basis: 18%
+
+    .footer
+        @media (min-width: $medium)
+            margin-top: -1.5em
+            z-index: 10
+            position: relative
+        @media (min-width: $large)
+            margin-top: -10em
+        @media (min-width: $huge)
+            margin-top: -13em

@@ -1,0 +1,164 @@
+.about-page
+    height: 100%
+    background-color: $grey
+    background-image: url('/src/assets/img/batik-background.png')
+    background-size: auto
+    color: $text-base
+
+    .about-page-wrapper
+        position: relative
+        height: 100%
+        background-color: $white
+        @media (min-width: $large)
+            width: 90%
+            margin: 0 auto
+        .about-page-menu
+            background-color: $grey
+            width: 100%
+            .side-nav-title
+                margin-bottom: 1rem
+            @media (min-width: $medium)
+                position: absolute
+                height: 100% !important
+                width: 14em
+                .side-nav
+                    display: block
+            @media (min-width: $large)
+                width: 17em
+            @media (min-width: $huge)
+                width: 20em
+            // .side-logo
+            //     background-color: $dark-blue
+            //     padding: 1em
+            //     img
+            //         width: 12em
+            .side-nav
+                flex-direction: column
+                ul
+                    text-align: center
+                    display: flex
+                    flex-wrap: wrap
+                    li:first-of-type
+                        flex-basis: 100%
+                    li:not(:first-of-type)
+                        flex-basis: 100%
+                    @media (min-width: $medium)
+                        display: block
+        .about-page-content
+            padding-bottom: 1em
+            @media (min-width: $medium)
+                padding: 0 0 1em 14em
+            @media (min-width: $large)
+                padding-left: 17em
+            @media (min-width: $huge)
+                padding-left: 20em
+            .about-page-banner
+                // position: relative
+                // display: flex
+                // align-items: center
+                // height: fit-content
+                height: 15em
+                width: 100%
+                background-image: url('/src/assets/img/profil-banner.png')
+                background-position: 90% 70%
+                background-size: cover
+                margin-bottom: 1em
+                // padding: 2em 10.8em 2em 1em
+                padding: 2em 1em
+                color: $text-inverse
+                text-shadow: $black 1px 1px
+                // &::after
+                //     content: ''
+                //     position: absolute
+                //     top: 0
+                //     left: 0
+                //     right: 0
+                //     bottom: 0
+                //     background-color: $black
+                //     opacity: .6
+                @media (min-width: $medium)
+                    padding: 4em 1em
+                    background-position: 50% 70%
+                @media (min-width: $huge)
+                    padding: 4em 5em
+                h1
+                    z-index: 1
+                    flex-basis: 60%
+                    @media (min-width: $medium)
+                        flex-basis: 60%
+                    @media (min-width: $large)
+                        flex-basis: 40%
+                    @media (min-width: $huge)
+                        flex-basis: 60%
+                    // margin-bottom: .5em
+                .text-detail
+                    font-weight: $font-normal
+            .about-page-detail
+                // @media (min-width: $huge)
+                //     display: flex
+                //     flex-wrap: wrap
+                //     justify-content: space-around
+                //     align-items: flex-start
+                .about-title
+                    font-size: 2rem
+                    margin-bottom: 1rem
+                    color: $text-base-light
+                    font-weight: $font-bold
+                    text-align: center
+                .about-page-point
+                    margin-bottom: 1em
+                    // display: flex
+                    // align-items: center
+                    // @media (min-width: $huge)
+                    //     flex-basis: 20%
+                    h2
+                        // margin-left: 1em
+                        color: $text-base-light
+                        margin-bottom: 1em
+                    p
+                        text-align: justify
+                        margin-bottom: 1em
+                    &.logo-point
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        img
+                            width: 7rem
+                            margin-bottom: 1em
+                        h2
+                            align-self: flex-start
+                        @media (min-width: $medium)
+                            flex-direction: row
+                            justify-content: space-between
+                            flex-wrap: wrap
+                            h2
+                                flex-basis: 100%
+                            img
+                                flex-basis: 30%
+                                padding: 0 1em
+                                @media (min-width: $huge)
+                                    padding: 0 3em
+                            p
+                                flex-basis: 70%
+                .counter
+                    line-height: 1.5em
+                    margin-bottom: 1em
+                    @media (min-width: $huge)
+                        flex-basis: 70%
+                a
+                    margin: 0 auto
+                    @media (min-width: $large)
+                        width: 400px
+                // .text-caption
+                //     margin-bottom: 1em
+                //     text-align: justify
+
+
+
+
+
+                    
+
+    
+
+        
