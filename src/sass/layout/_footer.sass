@@ -3,6 +3,15 @@
     background-color: $blue
     padding: 2em 0
     color: $text-inverse
+    &.onContact
+        @media (min-width: $medium)
+            margin-top: -1.5em
+            z-index: 10
+            position: relative
+        @media (min-width: $large)
+            margin-top: -10em
+        @media (min-width: $huge)
+            margin-top: -13em
     .grid
         flex-direction: column
         @media (min-width: $medium)

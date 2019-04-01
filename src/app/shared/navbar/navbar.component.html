@@ -1,0 +1,38 @@
+<header class="header" [class.header-solid]="isSolid">
+  <div class="container grid">
+    <div class="brand-logo">
+      <a [routerLink]="['/']">
+        <img src="../../assets/img/dk-logo-white.png" alt="Bank Duta Kepri">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Beranda</a></li>
+        <li><a [routerLink]="['/product']" [routerLinkActive]="['active']">Produk & Layanan</a></li>
+        <li><a [routerLink]="['/about']" [routerLinkActive]="['active']">Tentang Kami</a></li>
+        <li><a [routerLink]="['/contact']" [routerLinkActive]="['active']">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <nav class="main-nav-small" [class.is-open]="isNavOpen">
+      <ul class="nav-list">
+        <li>
+          <a [routerLink]="['/home']" [routerLinkActive]="['active']" (click)="navToggle()">Beranda</a>
+        </li>
+        <li>
+          <a [routerLink]="['/product']" [routerLinkActive]="['active']" (click)="navToggle()">Produk & Layanan</a>
+        </li>
+        <li>
+          <a [routerLink]="['/about']" [routerLinkActive]="['active']" (click)="navToggle()">Tentang Kami</a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']" [routerLinkActive]="['active']" (click)="navToggle()">Kontak</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav-toggle" (click)="navToggle()" [class.active]="isNavOpen">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+</header>
