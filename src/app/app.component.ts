@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd, RoutesRecognized } from '@angular/router';
+import { Router, RoutesRecognized } from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
 
 @Component({
   selector: 'app-root',
@@ -12,17 +13,16 @@ export class AppComponent implements OnInit {
   solidNavbar = false;
   onContact = false;
 
-  constructor(private router: Router,
-    private route: ActivatedRoute) { }
+  constructor(private router: Router) {
+    // af.database.list('/content/product/kredit');
+  }
 
   ngOnInit() {
     this.router.events.subscribe(val => {
       if (val instanceof RoutesRecognized) {
         this.solidNavbar = val.state.root.firstChild.data['solidNavbar'];
         this.onContact = val.state.root.firstChild.data['onContact'];
-
       }
-      console.log(this.solidNavbar);
     });
   }
 }

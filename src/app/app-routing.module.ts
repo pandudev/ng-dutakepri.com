@@ -16,21 +16,21 @@ const routes: Routes = [
     data: {
       solidNavbar: false
     },
-    component: HomeComponent
+    loadChildren: './home/home.module#HomeModule'
   },
   {
     path: 'product',
     data: {
       solidNavbar: true
     },
-    component: ProductComponent
+    loadChildren: './product/product.module#ProductModule'
   },
   {
     path: 'about',
     data: {
       solidNavbar: true
     },
-    component: AboutComponent
+    loadChildren: './about/about.module#AboutModule'
   },
   {
     path: 'contact',
@@ -38,7 +38,7 @@ const routes: Routes = [
       solidNavbar: true,
       onContact: true
     },
-    component: ContactComponent
+    loadChildren: './contact/contact.module#ContactModule'
   }
 ];
 
