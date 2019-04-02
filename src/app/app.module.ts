@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { AngularFireModule } from 'angularfire2';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,8 +14,7 @@ import { environment } from 'src/environments/environment';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
